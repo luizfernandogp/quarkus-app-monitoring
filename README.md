@@ -1,4 +1,4 @@
-# quakus-app-monitoring2 project
+# quakus-app-monitoring project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
