@@ -2,23 +2,8 @@ global:
   scrape_interval: 15s
   evaluation_interval: 15s
 scrape_configs:
-  - job_name: 'spring-monitoring-produto'
+  - job_name: 'quarkus-app-monitoring'
     scrape_interval: 5s
-    metrics_path: '/actuator/prometheus'
+    metrics_path: '/q/metrics'
     static_configs:
-      - targets: ['ms-produto:8081'] #Servidor da minha aplicação
-  - job_name: 'spring-monitoring-cupom'
-    scrape_interval: 5s
-    metrics_path: '/actuator/prometheus'
-    static_configs:
-      - targets: ['ms-cupom:8083'] #Servidor da minha aplicação
-  - job_name: 'spring-monitoring-email'
-    scrape_interval: 5s
-    metrics_path: '/actuator/prometheus'
-    static_configs:
-      - targets: ['ms-email:8084'] #Servidor da minha aplicação
-  - job_name: 'spring-monitoring-venda'
-    scrape_interval: 5s
-    metrics_path: '/actuator/prometheus'
-    static_configs:
-      - targets: ['ms-venda:8082'] #Servidor da minha aplicação
+      - targets: ['quarkus-app-monitoring:8080'] #Servidor da minha aplicação
